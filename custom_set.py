@@ -6,11 +6,11 @@ class CustomSet:
         self.custom_set = []
 
     
-    def add(self, random_string: str):
-        self.custom_set.append(random_string)
+    def add(self, item: str):
+        self.custom_set.append(item)
 
-    def remove(self, random_string: str):
-        self.custom_set.remove(random_string)
+    def remove(self, item: str):
+        self.custom_set.remove(item)
         
     def as_list(self):
         return list(self.custom_set)
