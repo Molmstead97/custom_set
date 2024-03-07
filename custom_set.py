@@ -1,7 +1,6 @@
 
 class CustomSet:
 
-   
     def __init__(self):
         self.custom_set = []
 
@@ -27,17 +26,18 @@ def main():
     set.add("mountain dew")
     set.add("top of the mornin to ya")
 
+    print(set.as_list())
+    
+    set.remove("bingo bongo")
+    print(set.as_list())
+    
     try:
         set.remove("lkjsdf")
     except ValueError:
         print("\nThat's not in the set")
-    
-    print(set.as_list())
 
     set.clear()
     print(set.as_list())
 
-    
-         
 if __name__ == "__main__":
     main()
