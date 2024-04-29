@@ -4,9 +4,9 @@ class CustomSet:
     def __init__(self):
         self.custom_set = []
 
-    
     def add(self, item: str):
-        self.custom_set.append(item)
+        if item not in self.custom_set:
+            self.custom_set.append(item)
 
     def remove(self, item: str):
         self.custom_set.remove(item)
@@ -24,11 +24,11 @@ def main():
    
     set.add("bingo bongo")
     set.add("mountain dew")
-    set.add("top of the mornin to ya")
+    set.add("bingo bongo")
 
     print(set.as_list())
     
-    set.remove("bingo bongo")
+    set.remove("mountain dew")
     print(set.as_list())
     
     try:
