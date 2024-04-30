@@ -9,8 +9,11 @@ class CustomSet:
             self.custom_set.append(item)
 
     def remove(self, item: str):
+        if item not in self.custom_set:
+            raise ValueError(f"{item} is not in the set")
         self.custom_set.remove(item)
         
+    
     def as_list(self):
         return list(self.custom_set)
 
@@ -32,10 +35,11 @@ def main():
     print(set.as_list())
     
     try:
-        set.remove("lkjsdf")
-    except ValueError:
-        print("\nThat's not in the set")
-
+        set.remove("lksdlkjf")
+        
+    except ValueError as error:
+        print("\nError:", error)
+    
     set.clear()
     print(set.as_list())
 
